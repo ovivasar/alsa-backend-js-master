@@ -948,8 +948,6 @@ const obtenerOCargaDetPendientes = async (req,res,next)=> {
     strSQL = strSQL + "         ingresos numeric(14,3),";
     strSQL = strSQL + "         egresos numeric(14,3)";
     strSQL = strSQL + "     ) left join mve_venta";
-
-    
     strSQL = strSQL + "     on (fve_inventario_ejecucion.cod = mve_venta.comprobante_original_codigo and";
     strSQL = strSQL + "         fve_inventario_ejecucion.serie = mve_venta.comprobante_original_serie and";
     strSQL = strSQL + "         fve_inventario_ejecucion.numero = mve_venta.comprobante_original_numero and";         
